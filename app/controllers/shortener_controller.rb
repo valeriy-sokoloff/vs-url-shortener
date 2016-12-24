@@ -11,12 +11,9 @@ class ShortenerController < ApplicationController
   end
 
   def redirect
-    @link = Link.find( @hasher.decode(redirect_params) )
-    if @link
-      redirect_to @link.original_url
-    else
-      render '/'
-    end
+    @link = Link.where(id: @hasher.decode(redirect_params) ).first
+
+    redirect_to ( @link.try(:original_url) || root_path )
   end
 
   private
