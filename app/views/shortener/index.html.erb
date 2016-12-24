@@ -19,7 +19,6 @@
         <%= form_for :link do |f| %>
           <div class="input-group">
             <%= f.text_field :original_url, value: nil, class: 'form-control input-lg', placeholder: 'Paste your original URL here' %>
-            <%= console %>
             <span class="input-group-btn">
               <%= f.submit 'Shorten URL', class: 'btn btn-primary btn-lg' %>
             </span>
