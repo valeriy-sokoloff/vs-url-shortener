@@ -2,7 +2,8 @@ class Link < ApplicationRecord
 
   validates :original_url,
             uniqueness: true,
-            presence: true
+            presence: true,
+            format: { with: /\A#{URI::regexp}\z/ }
 
   def save(*args)
     super
