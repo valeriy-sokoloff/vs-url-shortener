@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html, body, .main {
+  height: 100%;
+}
+
+.main {
+  display: table;
+  width: 100%;
+  background: image-url('bg_web.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-body {
+  display: table-cell;
+  vertical-align: middle;
+}
