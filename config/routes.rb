@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources 'shortener', :only=>[:index,:create]
+
+  get '/:hash_id', to: 'shortener#redirect'
+
+  root to: 'shortener#index'
+
 end

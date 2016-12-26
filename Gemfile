@@ -23,6 +23,8 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'hashids'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -43,6 +45,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'rails-controller-testing'
 end
 
 group :development do
